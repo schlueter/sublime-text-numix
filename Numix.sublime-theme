@@ -81,7 +81,7 @@
     // Tab dirty state (close button hidden)
     {
         "class": "tab_control",
-        "settings": ["!show_tab_close_buttons"],
+        "settings": ["show_tab_close_buttons"],
         "attributes": ["dirty"],
         "content_margin": [12,3,7,3]
     },
