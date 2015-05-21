@@ -11,7 +11,7 @@
         "tab_overlap": 1,
         "tab_width": 190,
         "tab_min_width": 50,
-        "tab_height": 40,
+        "tab_height": 25,
         "mouse_wheel_switch": false
     },
     {
@@ -38,7 +38,7 @@
     // Tab element
     {
         "class": "tab_control",
-        "content_margin": 0,
+        "content_margin": 4,
         "max_margin_trim": 0,
         "hit_test_level": 0,
         // Normal
@@ -46,8 +46,10 @@
         "layer0.inner_margin": [0,0],
         "layer0.opacity": 1,
         // Active
-        "layer1.texture": "Numix Theme/assets/tab-bar-active@2x.png",
-        "layer1.opacity": 0,
+        "layer1.tint": [43,43,43],
+        "layer1.inner_margin": [0, 0, 0, 2],
+        "layer1.opacity": 1.0,
+        "layer1.draw_center": false,
         // Hover
         "layer2.tint": [51,51,51],
         "layer2.opacity": 0
@@ -61,7 +63,8 @@
     {
         "class": "tab_control",
         "attributes": ["hover"],
-        "layer2.opacity": 1
+        "layer0.tint": [43, 43, 43],
+        "layer1.tint": [0, 80, 150]
     },
     // Tab active state
     {
@@ -76,14 +79,12 @@
         "attributes": ["selected", "hover"],
         "layer0.opacity": 1,
         "layer1.opacity": 1,
-        "layer2.opacity": 0
     },
     // Tab dirty state (close button hidden)
     {
         "class": "tab_control",
-        "settings": ["!show_tab_close_buttons"],
         "attributes": ["dirty"],
-        "content_margin": [12,3,7,3]
+        "layer1.tint": [150, 50, 0]
     },
 
 //
@@ -111,7 +112,7 @@
     },
     {
         "class": "tab_close_button",
-        "settings": ["!show_tab_close_buttons"],
+        "settings": ["show_tab_close_buttons"],
         "parents": [{"class": "tab_control","attributes": ["dirty"]}],
         "content_margin": [8,8],
         "layer0.opacity": 1
@@ -376,7 +377,7 @@
 
     {
         "class": "minimap_control",
-        "viewport_color": [214,73,55,80]
+        "viewport_color": [55,83,145,60]
     },
 
 //
@@ -459,8 +460,8 @@
     // Sidebar tree
     {
         "class": "sidebar_tree",
-        "row_padding": [12,6,12,6],
-        "indent": 12,
+        "row_padding": [7,3,9,3],
+        "indent": 15,
         "indent_offset": 15,
         "indent_top_level": false,
         "layer0.tint": [45,45,45],
@@ -477,19 +478,19 @@
     {
         "class": "tree_row",
         "attributes": ["selected"],
-        "layer0.tint": [214,73,55]
+        "layer0.tint": [55,73,165]
     },
     // Sidebar row hover
     {
         "class": "tree_row",
         "attributes": ["hover"],
-        "layer0.tint": [51,51,51]
+        "layer0.tint": [51,51,155]
     },
     // Sidebar row hover selected
     {
         "class": "tree_row",
         "attributes": ["hover", "selected"],
-        "layer0.tint": [220,80,62]
+        "layer0.tint": [32,80,130]
     },
     // Sidebar heading
     {
@@ -508,7 +509,7 @@
     {
         "class": "sidebar_label",
         "color": [222,222,222],
-        "font.size": 11
+        "font.size": 14
     },
     // Sidebar folder entry
     {
@@ -583,7 +584,7 @@
         "attributes": ["dirty"],
         "layer0.texture": "Numix Theme/assets/close@2x.png",
         "layer0.opacity": 1,
-        "layer0.tint": [214,73,55]
+        "layer0.tint": [55,73,214]
     },
     {
         "class": "close_button",
@@ -714,9 +715,9 @@
         "layer0.texture": "Numix Theme/assets/text-field-dark.png",
         //"layer0.tint": [153,153,153],
         "layer0.opacity": 1,
-        "layer0.inner_margin": 1,
+        "layer0.inner_margin": 0,
         //"content_margin": [5,7,0,5]
-        "content_margin": [5,6]
+        "content_margin": [0,0]
     },
 
 //
@@ -746,7 +747,7 @@
 
     {
         "class": "quick_panel",
-        "row_padding": 8,
+        "row_padding": 3,
         "dark_content": true
     },
     {
@@ -758,12 +759,12 @@
     {
         "class": "quick_panel_row",
         "attributes": ["hover"],
-        "layer0.tint": [214,73,55]
+        "layer0.tint": [55,73,145]
     },
     {
         "class": "quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": [214,73,55]
+        "layer0.tint": [55,73,145]
     },
     {
         "class": "quick_panel_label",
@@ -797,7 +798,7 @@
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
-        "layer0.tint": [214,73,55]
+        "layer0.tint": [55,73,145]
     },
 
 //
